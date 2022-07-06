@@ -1,2 +1,2 @@
 # css-fun
-Me experimenting with css on buttons
+Me experimenting with CSS on buttons

@@ -1,0 +1,48 @@
+.style2 {
+	margin: 10px;
+	border: solid lime;
+	border-width: 1px 0px 0px 5px;
+	background-color: transparent;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	padding: 10px;
+	position: relative;
+	transition: 0.1s;
+}
+
+.style2:hover {
+	transform: translate(-4px, -2px);
+	transition: 0.1s;
+}
+
+.style2:active {
+	transform: translate(4px, 4px);
+	transition: 0.1s;
+}
+
+.style2:after {
+	content: "";
+	position: absolute;
+	width: 100.5%;
+	height: 100%;
+	border: solid lime;
+	border-width: 0 5px 3px 0;
+	top: calc(50% + 5px);
+	left: calc(50% + 1.5px);
+	transform: translate(-50%, -50%);
+	transition: 0.1s;
+}
+
+.style2:hover:after {
+	top: calc(50% + 4px);
+	left: calc(50% + 6px);
+	transition: 0.1s;
+}
+
+.style2:active:after {
+	top: calc(50% + 1px);
+	left: calc(50% - 2.5px);
+	transition: 0.1s;
+}
+
