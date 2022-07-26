@@ -1,0 +1,80 @@
+.style4 {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	border: none;
+	border-left: 5px solid blue;
+	border-right: 5px solid transparent;
+	transition: 0.3s;
+}
+
+.style4:hover {
+	border-left: 10px solid blue;
+	border-right: 10px solid transparent;
+	transition: 0.3s;
+	border-radius: 3px;
+}
+
+.style4:after {
+	position: absolute;
+	content: "";
+	height: 0;
+	width: 30px;
+	border-right: 30px solid blue;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	transform: translateY(-50%);
+	top: 50%;
+	left: 0;
+	animation-name: slide-left;
+	animation-duration: 0.3s;
+	z-index: -1;
+}
+
+.style4:active:before {
+	animation-name: none;
+}
+
+.style4:before {
+	position: absolute;
+	content: "";
+	height: 0;
+	width: 30px;
+	border-left: 30px solid white;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	transform: translateY(-50%);
+	top: 50%;
+	right: 0;
+	animation-name: slide-right;
+	animation-duration: 0.3s;
+	z-index: -1;
+}
+
+.style4:active:after {
+	animation-name: none;
+}
+
+@keyframes slide-left {
+	0% {
+		left: 0px;
+		border-right: 30px solid blue;
+	}
+	100% {
+		left: -80px;
+		border-right: 0px solid blue;
+		border-radius: 50%;
+	}
+}
+
+@keyframes slide-right {
+	0% {
+		right: 0px;
+		border-left: 30px solid white;
+	}
+	100% {
+		right: -80px;
+		border-left: 0px solid white;
+		border-radius: 50%;
+	}
+}
